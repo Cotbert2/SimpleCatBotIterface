@@ -1,0 +1,20 @@
+img{
+    width: 3%;
+    border-radius: 10rem;
+    margin-left: 1rem;
+}
+
+.df{
+    display: flex;
+    align-items: center;
+}
+.container{
+    background: rgba(217, 221, 245, 0.589);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    margin: 1rem 5rem 1rem 1rem ;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem 1rem 1rem 0rem;
+    width: 100%;
+}

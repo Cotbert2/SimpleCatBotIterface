@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.messages{
+    display: block;
+    width: 100%;
+    height:90%;
+    position: absolute;
+    bottom: auto;
+    overflow-y: scroll;
+}
