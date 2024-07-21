@@ -1,11 +1,15 @@
 <div class="messageContainer">
-  <app-header></app-header>
-  <div class="messages">
-    <div *ngFor="let i of xd">
-      <app-my-message [content]="i.me"></app-my-message>
-      <app-bot-message [content]="i.you"></app-bot-message>
-
+  <div *ngIf="!isPresentation">
+    <app-header></app-header>
+    <div class="messages">
+      <div *ngFor="let i of xd">
+        <app-my-message [content]="i.me"></app-my-message>
+        <app-bot-message [content]="i.you"></app-bot-message>
+      </div>
     </div>
+    <app-bar></app-bar>
   </div>
-  <app-bar></app-bar>
+  <div *ngIf="isPresentation">
+    <app-presentation></app-presentation>
+  </div>
 </div>

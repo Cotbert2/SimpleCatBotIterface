@@ -16,4 +16,13 @@ input{
 button{
     padding: 1rem;
     margin: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/*animated hover*/
+button:hover{
+    animation: shake 0.5s;
+    background: #f7797d;
+
 }

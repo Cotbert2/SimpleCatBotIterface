@@ -1,5 +1,7 @@
-<hr>
+
 <div #inputDataDiv class="df">
-    <input #inputBox type="text" (keyup)="getValue(inputBox)" name="" id="" placeholder="Escribe aquí :D">
-    <button (click)="send(inputBox)">Enviar</button>
+    <button (click)="speechDictation()" [disabled]="micDisables"><span class="pi pi-microphone"></span></button>
+    <input #inputBox type="text" [(ngModel)]="textBox" placeholder="Type something here:D">
+    <button (click)="send()" type="submit"><span class="pi pi-send"></span>
+    </button>
 </div>

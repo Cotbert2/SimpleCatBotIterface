@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: white;
+}
+
+.presentationation{ /*take all the spaces*/
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.start-button{
+    margin:2rem;
+    padding: 1rem 5rem;
+}
+
+/*animated hover inverting colors*/
+
+.start-button:hover{ 
+    animation: shake 0.5s;
+    background: black;
+    color: white;
+    /*make bigger*/
+    transform: scale(1.1);
+    
+}

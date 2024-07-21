@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 //import * as convJson from 'src/assets/conversation.json';
+//import bar component
+import { BarComponent } from './package/bar/bar.component';
 
 interface Conversation {
   me : string,
@@ -14,34 +16,26 @@ interface Conversation {
 })
 
 export class AppComponent implements OnInit{
-  //public data : any = convJson;
-  
-  constructor(private render2: Renderer2){}
-  public xd : Conversation[] = [
-    {
-      "me" : "Hola1",
-      "you": "xd"
-    },
-    {
-      "me" : "Hola2",
-      "you": "xd"
-    },
-    {
-      "me" : "Hola3",
-      "you": "xd"
-    }
-  ];  
-  
-  @ViewChild('messages') element !: ElementRef;
+
+  isPresentation : boolean = false;
+
+  constructor(private render2: Renderer2){
+    console.log('Starts component')
+  }
+
+  @ViewChild(BarComponent) bar !: BarComponent;
+  public xd : any[] = [];
 
   public updateMesagges() : void {
-    
-  }
-  
 
+  }
+
+  ngAfterViewInit(){
+    this.xd = this.bar.something;
+  }
   ngOnInit(): void {
+
     console.log(this.xd[1]);
-    
   }
   title = 'chatBot';
 }

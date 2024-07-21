@@ -6,6 +6,9 @@ import { MyMessageComponent } from './package/my-message/my-message.component';
 import { BotMessageComponent } from './package/bot-message/bot-message.component';
 import { BarComponent } from './package/bar/bar.component';
 import { HeaderComponent } from './package/header/header.component';
+import { ApiBotService } from './service/api-bot.service';
+import { FormsModule } from '@angular/forms';
+import { PresentationComponent } from './package/presentation/presentation.component';
 
 @NgModule({
   declarations: [
@@ -13,13 +16,15 @@ import { HeaderComponent } from './package/header/header.component';
     MyMessageComponent,
     BotMessageComponent,
     BarComponent,
-    HeaderComponent
+    HeaderComponent,
+    PresentationComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ApiBotService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
